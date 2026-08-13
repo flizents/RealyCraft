@@ -1,0 +1,85 @@
+settings:
+  gui-title: '&6Выберите профессию'
+  withdraw-title: '&6Ваши выплаты'
+  quit-title: '&6Увольнение'
+  currency: '$'
+  allow-paid-quit: true
+  remove-job-on-quit: true
+  max-accumulated-balance: 1000000
+  allowed-worlds:
+    - world
+
+messages:
+  prefix: '&7[&6Job&7] &r'
+  no-permission: '&cУ вас нет прав для этой команды.'
+  already-have-job: '&eУ вас уже есть профессия: &f{job}&e.'
+  selected-job: '&aВы выбрали профессию: &f{job}&a.'
+  no-job: '&cУ вас нет профессии.'
+  salary-earned: '&aВы заработали &f{amount}&a за &f{job}&a.'
+  quit-success: '&aВы уволились из профессии: &f{job}&a.'
+  withdraw-success: '&aВы получили &f{amount}&a.'
+  no-salary: '&eУ вас нет накопленной зарплаты.'
+  invalid-world: '&cДействие запрещено в этом мире.'
+  invalid-block: '&cЭтот блок не приносит зарплату.'
+  cannot-pay: '&cНе удалось перечислить деньги. Обратитесь к администратору.'
+
+jobs:
+  miner:
+    display-name: '&bШахтёр'
+    icon: 'DIAMOND_PICKAXE'
+    slot: 10
+    salary-per-block: 1.5
+    blocks:
+      - STONE
+      - DEEPSLATE
+      - COAL_ORE
+      - COPPER_ORE
+      - IRON_ORE
+      - GOLD_ORE
+      - REDSTONE_ORE
+      - LAPIS_ORE
+      - DIAMOND_ORE
+      - EMERALD_ORE
+    worlds:
+      - world
+
+  lumberjack:
+    display-name: '&aЛесоруб'
+    icon: 'WOODEN_AXE'
+    slot: 12
+    salary-per-block: 1.2
+    blocks:
+      - OAK_LOG
+      - SPRUCE_LOG
+      - BIRCH_LOG
+      - JUNGLE_LOG
+      - ACACIA_LOG
+      - DARK_OAK_LOG
+      - MANGROVE_LOG
+      - CHERRY_LOG
+    worlds:
+      - world
+
+  farmer:
+    display-name: '&eФермер'
+    icon: 'WHEAT'
+    slot: 14
+    salary-per-block: 1.0
+    blocks:
+      - WHEAT
+      - CARROTS
+      - POTATOES
+      - BEETROOTS
+      - NETHER_WART
+      - SWEET_BERRIES
+    worlds:
+      - world
+
+gui:
+  size: 27
+  fill-item: 'BLACK_STAINED_GLASS_PANE'
+  fill-name: '&f '
+  take-salary-slot: 16
+  quit-slot: 26
+  take-salary-item: 'GOLD_INGOT'
+  quit-item: 'BARRIER'

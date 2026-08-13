@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+        id 'com.github.johnrengelman.shadow' version '8.1.1'
+        }
+
+        group = 'me.realycraft'
+        version = '1.0.3'
+
+        repositories {
+            mavenCentral()
+                maven {
+                        name = 'papermc'
+                                url = 'https://repo.papermc.io/repository/maven-public/'
+                                    }
+                                        maven {
+                                                name = 'jitpack'
+                                                        url = 'https://jitpack.io'
+                                                            }
+                                                            }
+
+                                                            dependencies {
+                                                                compileOnly 'io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT'
+                                                                    compileOnly 'com.github.milkbowl:vaultapi:1.7'
+                                                                        testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+                                                                        }
+
+                                                                        java {
+                                                                            toolchain {
+                                                                                    languageVersion = JavaLanguageVersion.of(21)
+                                                                                        }
+                                                                                        }
+
+                                                                                        tasks.withType(JavaCompile).configureEach {
+                                                                                            options.encoding = 'UTF-8'
+                                                                                            }
+
+                                                                                            tasks.test {
+                                                                                                useJUnitPlatform()
+                                                                                                }
+
+                                                                                                shadowJar {
+                                                                                                    archiveBaseName.set('RealycraftJob')
+                                                                                                        archiveVersion.set(version)
+                                                                                                            archiveClassifier.set('')
+                                                                                                            }
+                                                                                                            

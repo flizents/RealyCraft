@@ -1,0 +1,14 @@
+name: RealycraftJob
+main: me.realycraft.jobs.Main
+version: 1.0.3
+api-version: 1.21
+depend: [Vault]
+commands:
+  job:
+    description: Open the job selection menu.
+    usage: /<command> [quit]
+    permission: realycraftjob.command.job
+    permission-message: '&cУ вас нет прав для использования этой команды.'
+permissions:
+  realycraftjob.command.job:
+    default: true
