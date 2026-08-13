@@ -1,0 +1,24 @@
+name: RealCraftAntiCheat
+version: 1.1.0
+main: me.realycraft.anticheat.RealCraftAntiCheat
+api-version: '1.21'
+author: RealCraft
+description: Professional anti-cheat for Paper 1.21.8
+softdepend: [LiteBans, AdvancedBan, packetevents]
+commands:
+  check:
+    description: Check a player's anti-cheat status
+    usage: /check <player> [silent]
+    permission: realycraft.ac.check
+  ac:
+    description: RealCraftAntiCheat administration
+    usage: /ac <player|violations|alerts|staff|reload|info|gui|reset>
+    permission: realycraft.ac.admin
+permissions:
+  realycraft.ac.admin: {default: op}
+  realycraft.ac.check: {default: op}
+  realycraft.ac.player: {default: op}
+  realycraft.ac.violations: {default: op}
+  realycraft.ac.alerts: {default: op}
+  realycraft.ac.reload: {default: op}
+  realycraft.ac.bypass: {default: false}

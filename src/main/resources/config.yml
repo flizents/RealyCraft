@@ -1,0 +1,47 @@
+settings:
+  alerts-enabled: true
+  high-vl: 50
+  data-save-seconds: 30
+  max-history: 100
+database:
+  type: SQLITE
+  file: data.db
+  mysql:
+    host: localhost
+    port: 3306
+    database: realcraft
+    username: realcraft
+    password: change-me
+    pool-size: 5
+punishments:
+  50:
+    command: ["ac alert %player% %check% +%vl% VL"]
+  100:
+    command: ["kick %player% Cheating"]
+  150:
+    command: ["ban %player% Cheating"]
+checks:
+  enabled: true
+  reach:
+    enabled: true
+    max-distance: 3.15
+    max-vl: 100
+    ping-compensation: 0.015
+  killaura: {enabled: true, max-vl: 100}
+  autoclicker: {enabled: true, max-cps: 18, min-interval-ms: 45}
+  movement:
+    fly: {enabled: true, max-air-ticks: 14}
+    speed: {enabled: true, max-horizontal: 0.72}
+    no-slow: {enabled: true, max-horizontal: 0.25}
+    scaffold: {enabled: true, max-place-angle: 78}
+  fast-break: {enabled: true, min-interval-ms: 100}
+  fast-place: {enabled: true, min-interval-ms: 90}
+  xray:
+    enabled: true
+    rare-percent: 8.0
+    direct-mining-vl: 3
+    route-window: 30
+storage:
+  file: player-data.yml
+logs:
+  enabled: true
